@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "82873307362",
+    "project_id": "rupeetracker-46407",
+    "storage_bucket": "rupeetracker-46407.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82873307362:android:ece3d1363506057b3d4ebb",
+        "android_client_info": {
+          "package_name": "com.example.rupeetracker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIllDBqRx0pdJb3dOusvVJPWULtwBdrkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
