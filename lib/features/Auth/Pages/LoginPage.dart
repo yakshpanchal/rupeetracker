@@ -16,6 +16,7 @@ class _LoginState extends State<Login> {
   final _formKey = GlobalKey<FormState>();
   final _mobileController = TextEditingController();
   final _passwordController = TextEditingController();
+  bool _isPasswordVisible1 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +53,7 @@ class _LoginState extends State<Login> {
                     if (value == null || value.isEmpty || value.length != 10) {
                       return 'Please enter valid phone number';
                     }
-                    if (value != '9033006262') {
+                    if (value != '9033006262' && value != '9574709897') {
                       return 'This number is not Registerd';
                     }
                     return null;
@@ -65,22 +66,61 @@ class _LoginState extends State<Login> {
                 const SizedBox(
                   height: 20,
                 ),
-                CustomTextFormFiled(
+                // CustomTextFormFiled(
+                //   controller: _passwordController,
+                //   labelText: 'Password',
+                //   prefixIcon: Icons.password_outlined,
+                //   validator: (value) {
+                //     if (value != 'eVital@12') {
+                //       return 'Invalid password';
+                //     }
+                //     return null;
+                //   },
+                //   enabled: true,
+                //   keyboardType: TextInputType.visiblePassword,
+                //   obscureText: true,
+                //   onChanged: (String value) {},
+                // ),
+                // const SizedBox(
+                //   height: 30,
+                // ),
+                TextFormField(
                   controller: _passwordController,
-                  labelText: 'Password',
-                  prefixIcon: Icons.password_outlined,
+                  obscureText: !_isPasswordVisible1,
                   validator: (value) {
-                    if (value != 'eVital@12') {
+                    if (value != 'eVital@12' && value != 'Yaksh@512') {
                       return 'Invalid password';
                     }
                     return null;
                   },
-                  enabled: true,
-                  keyboardType: TextInputType.visiblePassword,
-                  obscureText: true,
-                  onChanged: (String value) {},
+                  decoration: InputDecoration(
+                      prefixIcon: Icon(
+                        Icons.password_rounded,
+                        color: Colors.black87,
+                      ),
+                      suffixIcon: IconButton(
+                        icon: Icon(
+                          _isPasswordVisible1
+                              ? Icons.visibility
+                              : Icons.visibility_off,
+                          color: _isPasswordVisible1
+                              ? Colors.black87
+                              : Colors.black,
+                          size: 22,
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _isPasswordVisible1 =
+                            !_isPasswordVisible1;
+                          });
+                        },
+                      ),
+                      border: InputBorder.none,
+                      hintText: "Password",
+                      hintStyle:
+                      TextStyle(color: Colors.black87)),
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 30,
                 ),
                 CustomElevetedButton(
@@ -90,12 +130,12 @@ class _LoginState extends State<Login> {
                   elevation: 4,
                   borderRadius: 13,
                   onPressed: () {
-                    // if (_formKey.currentState!.validate()) {
-                    //   GoRouter.of(context).pushReplacementNamed(
-                    //       MyappRouteConstants.homeRouteName);
-                    // }
-                    GoRouter.of(context)
-                        .pushReplacementNamed(MyappRouteConstants.SplashHomeRouteName);
+                    if (_formKey.currentState!.validate()) {
+                      GoRouter.of(context).pushReplacementNamed(
+                          MyappRouteConstants.SplashHomeRouteName);
+                    }
+                    // GoRouter.of(context)
+                    //     .pushReplacementNamed(MyappRouteConstants.SplashHomeRouteName);
                   },
                   buttonWidth: 200,
                   buttonHeight: 60,

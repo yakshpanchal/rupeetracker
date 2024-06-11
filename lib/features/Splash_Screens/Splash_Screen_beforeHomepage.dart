@@ -17,7 +17,7 @@ class _SplashScreenHomeState extends State<SplashScreenHome> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 4), () {
+    Timer(Duration(seconds: 3), () {
       GoRouter.of(context)
           .pushReplacementNamed(MyappRouteConstants.homeRouteName);
     });

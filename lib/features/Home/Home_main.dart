@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
         index: _selectedIndex,
         children: [
           HomePage(),
-          // ProfilePage(),
+          ProfilePage(),
         ],
       ),
       bottomNavigationBar: SingleChildScrollView(
@@ -39,18 +39,18 @@ class _HomeState extends State<Home> {
           child: SalomonBottomBar(
             // items: _bottomNavBarItems,
             items: [
-              /// Home
+              // Home
               SalomonBottomBarItem(
                 icon: Icon(Icons.home),
                 title: Text("Home"),
                 selectedColor: Colors.purple,
               ),
-              /// Profile
-              // SalomonBottomBarItem(
-              //   icon: Icon(Icons.person),
-              //   title: Text("Profile"),
-              //   selectedColor: Colors.blueAccent,
-              // ),
+              // Profile
+              SalomonBottomBarItem(
+                icon: Icon(Icons.person),
+                title: Text("Profile"),
+                selectedColor: Colors.blueAccent,
+              ),
             ],
             currentIndex: _selectedIndex,
             onTap: _onItemTapped,
@@ -68,9 +68,9 @@ class _HomeState extends State<Home> {
       icon: Icon(Icons.home),
       label: 'Home',
     ),
-    // BottomNavigationBarItem(
-    //   icon: Icon(Icons.person),
-    //   label: 'Profile',
-    // ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.person),
+      label: 'Profile',
+    ),
   ];
 }

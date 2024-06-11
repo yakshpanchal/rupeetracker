@@ -17,7 +17,7 @@ class _SplashScreenAppState extends State<SplashScreenApp> {
   void initState() {
     super.initState();
 
-    Timer(Duration(milliseconds: 5200), () {
+    Timer(Duration(seconds: 2), () {
       GoRouter.of(context)
           .pushReplacementNamed(MyappRouteConstants.loginRouteName);
     });

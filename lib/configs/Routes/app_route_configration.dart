@@ -16,7 +16,7 @@ class MyappRouter {
     // we need to pass some of the parameter
     // routes that taking a list
 
-    initialLocation: "/",
+    initialLocation: "/splashApp",
     routes: <RouteBase>[
       GoRoute(
         name: MyappRouteConstants.homepageRouteName,
