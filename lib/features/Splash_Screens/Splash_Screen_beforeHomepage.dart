@@ -26,16 +26,22 @@ class _SplashScreenHomeState extends State<SplashScreenHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar:AppBar(
+        title: Align(
+          alignment: Alignment.center,
+          child: SizedBox(
+            height: 70,
+            child: Lottie.asset('assets/animations/Welcome2Animation.json'),
+          ),
+        ),
+      ),
       body: Container(
         color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
-              height: 100,
-                child: Lottie.asset('assets/animations/Welcome2Animation.json'),
-            ),
-            Lottie.asset('assets/animations/Loading.json'),
+
+            Lottie.asset('assets/animations/LoadingAnimation.json'),
             SizedBox(height: 10,),
             Center(
               child: Text(

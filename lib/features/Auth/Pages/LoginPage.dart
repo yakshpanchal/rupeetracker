@@ -39,7 +39,7 @@ class _LoginState extends State<Login> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Login with your mobile and password'),
+
                 SizedBox(
                   height: 300,
                   child: Image.asset('assets/images/LoginImage.png'),
@@ -141,6 +141,8 @@ class _LoginState extends State<Login> {
                   buttonHeight: 60,
                   buttontextSize: 20,
                 ),
+                const SizedBox(height: 20),
+                Text('Login with your mobile and password'),
                 const SizedBox(height: 20),
 
                 Center(
