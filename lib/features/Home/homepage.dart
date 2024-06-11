@@ -164,8 +164,9 @@ class _HomePageState extends State<HomePage> {
                         ),
                         Icon(
                           user.stockStatus == "high"
-                              ? Icons.arrow_upward
-                              : Icons.arrow_downward,
+                              ? Icons.arrow_drop_up
+                              : Icons.arrow_drop_down,
+                          size: 30,
                           color:
                               user.stockStatus == "high" ? Colors.green : Colors.red,
                         ),
@@ -223,6 +224,8 @@ class UserSearchDelegate extends SearchDelegate {
 
   @override
   Widget buildSuggestions(BuildContext context) {
+
+    //  here we can filter this using name , city, phine number and city all
     final suggestions = users.where((user) {
       return user.name.toLowerCase().contains(query.toLowerCase()) ||
           user.phoneNumber.contains(query) ||
@@ -242,8 +245,9 @@ class UserSearchDelegate extends SearchDelegate {
               Text('₹${user.rupee}'),
               Icon(
                 user.stockStatus == "high"
-                    ? Icons.arrow_upward
-                    : Icons.arrow_downward,
+                    ? Icons.arrow_drop_up
+                    : Icons.arrow_drop_down,
+                size: 30,
                 color: user.stockStatus == "high" ? Colors.green : Colors.red,
               ),
             ],
