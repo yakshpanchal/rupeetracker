@@ -1,11 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:rupeetracker/configs/Routes/app_route_configration.dart';
 import 'package:rupeetracker/configs/Theme/theme.dart';
-import 'package:rupeetracker/features/Auth/Pages/LoginPage.dart';
-import 'package:rupeetracker/features/Auth/Pages/SignUpPage.dart';
-import 'package:rupeetracker/features/Home/homepage.dart';
 import 'package:rupeetracker/firebase_options.dart';
 
 void main() async {

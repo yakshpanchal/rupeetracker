@@ -39,6 +39,8 @@ dependencies:
   go_router: ^14.1.4
   modular_ui: ^0.0.5
   lottie: ^3.1.2
+  hive: ^2.2.3
+  salomon_bottom_bar: ^3.3.2
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +69,7 @@ flutter:
     - assets/
     - assets/animations/
     - assets/images/
+    - assets/usersimage/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
